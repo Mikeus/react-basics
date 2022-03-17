@@ -3,22 +3,71 @@ import Card from './Card'
 import Header from './Header'
 import Logo from './Logo'
 
-export default function (props) {
+// let data = {
+//   fullName: 'Julia Reto',
+//   description: 'jakis tam zwod',
+//   joinedYear: 2004,
+//   totalFriends: 235,
+//   status: 'Friend of Friend',
+//   imageUrl:
+//     'https://images.unsplash.com/photo-1647008975500-649c27351ecf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+// }
+
+let data = [
+  {
+    fullName: 'Julia Reto',
+    description: 'jakis tam zwod',
+    joinedYear: 2004,
+    totalFriends: 235,
+    status: 'Friend of Friend',
+    imageUrl:
+      'https://images.unsplash.com/photo-1647008975500-649c27351ecf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+  },
+  {
+    fullName: 'David Jablo',
+    description: 'pilkarz',
+    joinedYear: 2000,
+    totalFriends: 5,
+    status: 'Friend only',
+    imageUrl:
+      'https://images.unsplash.com/photo-1647008975500-649c27351ecf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+  },
+  {
+    fullName: 'Peter Nowy',
+    description: 'Designer from new york usa',
+    joinedYear: 2020,
+    totalFriends: 333,
+    status: 'Friend',
+    imageUrl:
+      'https://images.unsplash.com/photo-1647008975500-649c27351ecf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+  },
+]
+
+export default function App(props) {
+  const printCards = () => {
+    // let items = []
+    // for (let index = 0; index < data.length; index++) {
+    //   items.push(<Card userData={data[index]} />)
+    // }
+    // return items
+
+    return data.map((item) => {
+      return <Card userData={item} />
+    })
+  }
+
   return (
     <>
       <Header background='red'>
         <nav>
-          <a href='#'>Link 1</a>
-          <a href='#'>Link 1</a>
-          <a href='#'>Link 1</a>
+          <a href='/#'>Link 1</a>
+          <a href='/#'>Link 1</a>
+          <a href='/#'>Link 1</a>
         </nav>
         <Logo />
       </Header>
       <main style={{ margin: '20px auto', width: '100%', maxWidth: '960px' }}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <div className='ui link cards'>{printCards()}</div>
       </main>
     </>
   )
