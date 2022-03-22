@@ -43,7 +43,7 @@ let data = [
   },
 ]
 
-export default function App(props) {
+const App = (props) => {
   const printCards = () => {
     // let items = []
     // for (let index = 0; index < data.length; index++) {
@@ -51,8 +51,8 @@ export default function App(props) {
     // }
     // return items
 
-    return data.map((item) => {
-      return <Card userData={item} />
+    return data.map((item, index) => {
+      return <Card userData={item} key={index} />
     })
   }
 
@@ -67,8 +67,11 @@ export default function App(props) {
         <Logo />
       </Header>
       <main style={{ margin: '20px auto', width: '100%', maxWidth: '960px' }}>
-        <div className='ui link cards'>{printCards()}</div>
+        <React.StrictMode>
+          <div className='ui link cards'>{printCards()}</div>
+        </React.StrictMode>
       </main>
     </>
   )
 }
+export default App

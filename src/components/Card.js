@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Card(props) {
+const Card = (props) => {
   return (
     <div className='card'>
       <div className='image'>
@@ -23,3 +23,5 @@ export default function Card(props) {
     </div>
   )
 }
+
+export default Card
