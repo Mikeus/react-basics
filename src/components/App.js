@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 import Card from './Card'
 import Header from './Header'
 import Logo from './Logo'
@@ -66,10 +67,16 @@ const App = (props) => {
         </nav>
         <Logo />
       </Header>
-      <main style={{ margin: '20px auto', width: '100%', maxWidth: '960px' }}>
-        <React.StrictMode>
-          <div className='ui link cards'>{printCards()}</div>
-        </React.StrictMode>
+      <main
+        style={{
+          margin: '20px auto',
+          width: '100%',
+          maxWidth: '960px',
+          padding: '20px 20px',
+        }}
+      >
+        {/* <div className='ui link cards'>{printCards()}</div> */}
+        <Button>Button</Button>
       </main>
     </>
   )
