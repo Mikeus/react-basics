@@ -76,6 +76,13 @@ const App = (props) => {
         }}
       >
         {/* <div className='ui link cards'>{printCards()}</div> */}
+        <div className='counter'>
+          <div className='counter__number'>0</div>
+          <div className='counter__buttons'>
+            <button className='counter__plus'>+</button>
+            <button className='counter__minus'>-</button>
+          </div>
+        </div>
         <Button>Button</Button>
       </main>
     </>
