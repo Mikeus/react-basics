@@ -11,15 +11,11 @@
   margin-bottom: 4rem;
 }
 
-.counter__plus {
-  margin-right: 1rem;
-}
-
-.counter__plus,
-.counter__minus {
+.counter__button {
   background: black;
   color: white;
   border: none;
   font-size: 3rem;
   width: 150px;
+  margin-right: 1rem;
 }
