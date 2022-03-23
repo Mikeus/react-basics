@@ -1,5 +1,8 @@
 const Button = (props) => {
   const clickedButton = () => {
+    if (props.goal === props.points) {
+      props.setGoal(props.points * 2)
+    }
     if (props.value === 'plus') {
       props.setPoints(props.points + 1)
     } else {
