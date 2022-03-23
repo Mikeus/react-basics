@@ -1,5 +1,11 @@
 const Button = (props) => {
   const clickedButton = () => {
+    if (props.value === 'plus') {
+      props.setPoints(props.points + 1)
+    } else {
+      props.setPoints(props.points - 1)
+    }
+
     console.log('button clicked!')
   }
 
