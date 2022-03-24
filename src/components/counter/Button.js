@@ -9,11 +9,25 @@ const Button = (props) => {
       props.setPoints(props.points - 1)
     }
 
-    console.log('button clicked!')
+    // console.log('button clicked!')
+  }
+
+  const mouseEnters = (e) => {
+    console.log('Mouse went on top of button')
+    console.log(e)
+  }
+  const mouseleave = (e) => {
+    console.log('Mouse went on top of leave')
+    console.log(e)
   }
 
   return (
-    <button className='counter__button' onClick={clickedButton}>
+    <button
+      className='counter__button'
+      onClick={clickedButton}
+      onMouseEnter={mouseEnters}
+      onMouseLeave={mouseleave}
+    >
       {props.children}
     </button>
   )

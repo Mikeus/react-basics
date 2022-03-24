@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from './counter/Counter'
+import Form from './form/Form'
 import Header from './Header'
 import Logo from './Logo'
 
@@ -22,7 +22,8 @@ const App = (props) => {
           padding: '20px 20px',
         }}
       >
-        <Counter />
+        {/* <Counter /> */}
+        <Form />
       </main>
     </>
   )

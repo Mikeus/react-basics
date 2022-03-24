@@ -19,3 +19,12 @@
   width: 150px;
   margin-right: 1rem;
 }
+
+form .error-message.show {
+  display: block;
+}
+
+form .error-message {
+  display: none;
+  color: red;
+}
